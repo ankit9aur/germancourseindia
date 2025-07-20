@@ -1,3 +1,5 @@
+import './globals.css'
+// import '../styles/globals.css';
 export const metadata = {
   title: 'German Course India | A1 to C2 | Job Guarantee Program',
   description: 'Join the best German language course in India. A1 to C2 levels, Goethe/TestDaF/DSH prep, live classes, 100% job assistance. Download brochure now!',
