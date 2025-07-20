@@ -1,103 +1,45 @@
-import Image from "next/image";
-
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="font-sans">
+      <header className="flex justify-between items-center px-6 py-4 shadow bg-white z-10 relative">
+        <img src="/logo.png" alt="German Course India Logo" className="h-10" />
+        <div className="space-x-3">
+          <button className="bg-purple-200 text-sm px-4 py-1 rounded hover:bg-purple-300 transition-all">Book Free Demo</button>
+          <button className="bg-purple-300 text-sm px-4 py-1 rounded hover:bg-purple-400 transition-all">Get Quick Call Back</button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </header>
+
+      <section className="bg-gradient-to-r from-red-400 to-red-600 text-white p-6 md:p-12">
+        <div className="max-w-7xl mx-auto">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">
+            German Language Course - Job Guarantee Program
+          </h1>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>66 Hrs (45 Hrs Training+11 Hrs GD+10 Hrs Exam Prep) for Each Level.</li>
+            <li>Master A1, A2, B1, B2, C1, C2 Levels of the German Language.</li>
+            <li>Ace the Goethe Institute, TestDaF, and DSH Exam Preparations.</li>
+          </ul>
+          <div className="mt-4">
+            <span className="text-yellow-300 font-bold">★ 4.9</span>
+            <span className="ml-2">(2354 Ratings)</span>
+            <span className="ml-2">2518 Learners</span>
+          </div>
+
+          <form className="bg-white text-black p-4 mt-6 rounded shadow max-w-md">
+            <label className="block mb-2 text-sm font-medium">Download Course Brochure</label>
+            <input type="email" placeholder="Email" className="w-full p-2 border rounded mb-2" required />
+            <div className="flex gap-2 mb-2">
+              <select className="w-1/3 p-2 border rounded">
+                <option value="India">India (+91)</option>
+              </select>
+              <input type="text" placeholder="Mobile no *" className="w-2/3 p-2 border rounded" required />
+            </div>
+            <button type="submit" className="w-full bg-purple-500 text-white py-2 rounded hover:bg-purple-600">
+              Send Me Brochure »
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
   );
 }
