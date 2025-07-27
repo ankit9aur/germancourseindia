@@ -5,6 +5,7 @@ import Offerings from '../components/Offerings';
 import FAQ from '../components/FAQ';
 import Testimonials from '../components/Testimonials';
 import Footer from '../components/Footer';
+import LocationMap from '../components/LocationMap';
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
         <Offerings />
         <FAQ />
         <Testimonials />
+        <LocationMap />
         <Footer />
       </main>
     </>

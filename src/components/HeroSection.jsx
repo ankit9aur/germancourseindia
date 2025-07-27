@@ -11,14 +11,14 @@ function HeroSection() {
             German Language Course – Job Guarantee Program
           </h1>
           <ul className="list-disc pl-5 space-y-1 text-sm md:text-base mb-4">
-            <li>66 Hrs (45 Hrs Training + 11 Hrs GD + 10 Hrs Exam Prep) for Each Level.</li>
-            <li>Master A1, A2, B1, B2, C1, C2 Levels of the German Language.</li>
-            <li>Ace the Goethe Institute, TestDaF, and DSH Exam Preparations.</li>
+            <li>140 Hrs (100 Hrs Training + 20 Hrs GD + 20 Hrs Exam Prep) for Each Level.</li>
+            <li>🎯 Crack Goethe | Telc | ÖSD Exams</li>
+            <li>🚀 Join Now & Start Speaking German with Confidence!</li>
           </ul>
           <div className="mt-4 text-sm">
-            <span className="text-yellow-600 font-bold">★ 4.9</span>
+            <span className="text-yellow-600 font-bold">⭐ 4.9</span>
             <span className="ml-2 text-gray-700">(2354 Ratings)</span>
-            <span className="ml-2 text-purple-700 font-medium">2518 Learners</span>
+            <span className="ml-2 text-purple-700 font-medium">👨‍🎓 2518 Learners</span>
           </div>
         </div>
 
