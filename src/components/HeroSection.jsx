@@ -1,7 +1,16 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 function HeroSection() {
+  const redirectInputRef = useRef(null);
+
+  useEffect(() => {
+    if (redirectInputRef.current) {
+      // Set redirect URL to current host + /thankyou
+      redirectInputRef.current.value = window.location.origin + '/thankyou';
+    }
+  }, []);
+
   return (
     <section className="py-12 px-6 bg-gradient-to-r from-red-100 via-yellow-50 to-purple-100 text-gray-900">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
@@ -23,20 +32,45 @@ function HeroSection() {
         </div>
 
         {/* Right Side Form */}
-        <form className="bg-white text-black p-6 rounded-xl shadow-lg border border-gray-200 max-w-md w-full">
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          className="bg-white text-black p-6 rounded-xl shadow-lg border border-gray-200 max-w-md w-full"
+        >
+          {/* Web3Forms config */}
+          <input type="hidden" name="access_key" value="3425776e-6842-43e2-b570-3e023846329e" />
+          <input type="hidden" name="subject" value="New German Course Brochure Request" />
+          {/* Redirect set dynamically */}
+          <input
+            ref={redirectInputRef}
+            type="hidden"
+            name="redirect"
+            id="redirect-input"
+            value=""
+          />
+          {/* This makes reply-to work in your notification (optional, Web3Forms does this by default) */}
+          {/* <input type="hidden" name="replyto" value="" /> */}
+
           <label className="block mb-2 text-sm font-medium">Download Course Brochure</label>
           <input
             type="email"
+            name="email"
             placeholder="Email"
             className="w-full p-2 border border-gray-300 rounded mb-3 text-sm"
             required
           />
           <div className="flex gap-2 mb-3">
-            <select className="w-1/3 p-2 border border-gray-300 rounded text-sm">
-              <option value="India">+91</option>
+            <select
+              name="phoneCode"
+              className="w-1/3 p-2 border border-gray-300 rounded text-sm"
+              defaultValue="+91"
+            >
+              <option value="+91">+91</option>
+              {/* Add more country codes if needed */}
             </select>
             <input
               type="text"
+              name="mobile"
               placeholder="Mobile No *"
               className="w-2/3 p-2 border border-gray-300 rounded text-sm"
               required
